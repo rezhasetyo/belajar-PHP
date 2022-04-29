@@ -1,16 +1,16 @@
 <?php
-include "koneksi.php";
+  include "koneksi.php";
 
-$id = isset($_GET['id'])   ?   $_GET['id'] : '';
+  $id = isset($_GET['id'])   ?   $_GET['id'] : '';
 
-$query = "SELECT * from daftar_hutang WHERE id='$id'";
-$ambil_data = mysqli_query($konek,$query);
-$getdata = mysqli_fetch_assoc($ambil_data);
+  $query = "SELECT * from hutang WHERE id='$id'";
+  $ambil_data = mysqli_query($konek,$query);
+  $getdata = mysqli_fetch_assoc($ambil_data);
 ?>
 
 <div class="jumbotron">
-    <br><h3>Form Daftar Hutang</h3>
-    <div class="col-10">
+  <br><h3>Form Daftar Hutang</h3>
+  <div class="col-10">
     <form action ="simpan.php" method="POST" >
       <div class="form-group">
         <label for="nama">Nama</label>
@@ -27,42 +27,27 @@ $getdata = mysqli_fetch_assoc($ambil_data);
       <div class="form-group">
         <label for="jenis_kelamin">Jenis Kelamin</label>
         <select id="jenis_kelamin" class="form-control" name="jenis_kelamin">
-          <option value="L"
-          <?php
-          if($getdata['jenis_kelamin']=='L')
-            echo"selected";
-          ?>
-          >Laki-laki</option>
-          <option value="P"
-          <?php
-          if($getdata['jenis_kelamin']=='P')
-            echo"selected";
-          ?>
-          >Perempuan</option>
+          <option value="L"<?php if($getdata['jenis_kelamin']=='L')  echo"selected"; ?>>Laki-laki</option>
+          <option value="P"<?php if($getdata['jenis_kelamin']=='P') echo"selected"; ?>>Perempuan</option>
         </select>
       </div>
      
       <div class="form-group">
         <label for="alamat">Alamat</label>
-        <textarea class="form-control" id="alamat" name="alamat" rows="2" 
-        placeholder="Inputkan Alamat Lengkap" value="<?php echo $getdata['alamat']?>">
-        </textarea>
+        <!-- <textarea> JANGAN ADA SPASI -->
+        <textarea class="form-control" id="alamat" name="alamat" rows="2" placeholder="Inputkan Alamat Lengkap" 
+        value="<?php echo $getdata['alamat']?>"></textarea>     
       </div>
 
       <div class="form-group">
         <label for="hutang">Hutang Berapa?</label>
-        <input type="text" id="hutang" class="form-control" name="hutang" 
+        <input type="number" id="hutang" class="form-control" name="hutang" 
         placeholder="Jumlah Hutang" value="<?php echo $getdata['hutang']?>">
       </div>
 
-      <?php
-      if($id!='')
-      {
-        ?>
+      <?php if($id!='') { ?>
         <input name="id" value="<?php echo $id?>" type="hidden">
-        <?php
-      }
-      ?>
+      <?php } ?>
       
       <button type="submit" class="btn btn-primary">Submit</button>
       <a href="index.php"><button type="button" class="btn btn-danger">Batal</button></a>
