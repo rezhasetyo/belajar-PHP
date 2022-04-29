@@ -35,8 +35,8 @@
       <div class="form-group">
         <label for="alamat">Alamat</label>
         <!-- <textarea> JANGAN ADA SPASI -->
-        <textarea class="form-control" id="alamat" name="alamat" rows="2" placeholder="Inputkan Alamat Lengkap" 
-        value="<?php echo $getdata['alamat']?>"></textarea>     
+        <textarea class="form-control" id="alamat" name="alamat" rows="2" 
+        placeholder="Inputkan Alamat Lengkap"><?php echo $getdata['alamat']?></textarea>     
       </div>
 
       <div class="form-group">
@@ -45,12 +45,12 @@
         placeholder="Jumlah Hutang" value="<?php echo $getdata['hutang']?>">
       </div>
 
-      <?php if($id!='') { ?>
+      <?php if($id!='') { ?> 
         <input name="id" value="<?php echo $id?>" type="hidden">
       <?php } ?>
       
       <button type="submit" class="btn btn-primary">Submit</button>
       <a href="index.php"><button type="button" class="btn btn-danger">Batal</button></a>
     </form>
-    </div>
+  </div>
   </div>
