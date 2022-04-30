@@ -10,7 +10,7 @@
 
 <div class="jumbotron">
   <br><h3>Form Daftar Hutang</h3>
-  <div class="col-10">
+  <div class="col-6">
     <form action ="simpan.php" method="POST" >
       <div class="form-group">
         <label for="nama">Nama</label>
@@ -53,4 +53,4 @@
       <a href="index.php"><button type="button" class="btn btn-danger">Batal</button></a>
     </form>
   </div>
-  </div>
+</div>

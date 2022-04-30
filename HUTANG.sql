@@ -41,7 +41,9 @@ CREATE TABLE `hutang` (
 --
 
 INSERT INTO `hutang` (`id`, `nama`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `hutang`) VALUES
-(1, 'aa', '2022-04-01', 'L', 'aa', 12);
+(1, 'Rezha Setyo Atmojo', '2001-05-16', 'L', 'Los Angeles', 1000),
+(2, 'Naruto Uzumaki', '2001-05-17', 'L', 'Konohagakure', 2500),
+(3, 'Luhut Binsar Pandjaitan', '1950-05-18', 'L', 'Medan', 10000);
 
 --
 -- Indexes for dumped tables
