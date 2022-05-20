@@ -1,6 +1,5 @@
 <?php
-include "../Model/koneksi.php";
-// require "/Model/koneksi.php";
+include "koneksi.php";
 
 // (isset($_POST['simpan'])){
 // $nama               = $_POST['nama'];

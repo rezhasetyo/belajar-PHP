@@ -1,5 +1,5 @@
 <?php
-include "../Model/koneksi.php";
+include "koneksi.php";
 
 $id = isset($_GET['id'])   ?   $_GET['id'] : '';
 

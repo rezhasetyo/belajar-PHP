@@ -1,5 +1,5 @@
 <?php
-  include "Model/koneksi.php";
+  include "koneksi.php";
 
   $id = isset($_GET['id'])   ?   $_GET['id'] : '';
 
@@ -11,7 +11,7 @@
 <div class="jumbotron">
   <br><h3>Form Daftar Hutang</h3>
   <div class="col-6">
-    <form action ="Controller/simpan.php" method="POST" >
+    <form action ="simpan.php" method="POST" >
       <div class="form-group">
         <label for="nama">Nama</label>
         <input type="text" id="nama" name="nama" class="form-control" 

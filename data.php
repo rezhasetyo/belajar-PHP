@@ -1,5 +1,5 @@
 <?php
-  include "Model/koneksi.php";
+  include "koneksi.php";
 
   $query = "SELECT * from hutang ORDER BY id ASC";
   $ambil_data = mysqli_query($konek,$query);  ?>
@@ -58,7 +58,7 @@
             <!-- 7. Kolom Aksi -->
             <td align="center">
               <!-- 7.1 Aksi Edit -->
-              <a href="Controller/hapus.php?id=<?php echo $getdata['id']?>">
+              <a href="hapus.php?id=<?php echo $getdata['id']?>">
                 <button class="btn btn-danger btn-sm" 
                   onClick="return confirm('Apakah yakin akan menghapus?'); if (ok) return true; else return false">Hapus
                 </button> 
